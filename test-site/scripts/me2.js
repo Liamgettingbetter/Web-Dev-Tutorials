@@ -7,13 +7,13 @@ info.textContent = "Below is a dynamic list. Click anywhere outside the list to 
 document.body.appendChild(info);
 document.body.appendChild(list);
 
-html.onClick = function() {
+html.onclick = function() {
     var listItem = document.createElement('li');
     var listContent = prompt("What content do you want the list item to have?");
     listItem.textContent = listContent;
     list.appendChild(listItem);
     
-    listItem.onClick = function(e) {
+    listItem.onclick = function(e) {
         e.stopPropagation();
         var lastContent = prompt("Enter new Content for your list item");
         this.textContent = listContent;
