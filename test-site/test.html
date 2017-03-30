@@ -88,5 +88,14 @@
         }
         
         guessSubmit.addEventListener("click", checkGuess);
+        
+        function setGameOver() {
+            guessField.disable = true;
+            guessSubmit.disable = true;
+            resetButton = document.createElement("button");
+            resetButton.textContent = "Start New Game!";
+            document.appendChild(resetButton);
+            resetButton.addEventListener("click", resetGame);
+        }
     </script>
 </html>
