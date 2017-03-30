@@ -50,6 +50,7 @@
         
         function checkGuess() {
             // set the current value entered inside the text field.
+            // guessField.value is where input guesses store.
             var userGuess = Number(guessField.value);
             
             if(guessCount === 1) {
@@ -79,5 +80,7 @@
             guessField.value = '';
             guessField.focus();
         }
+        
+        guessSubmit.addEventListener("click", checkGuess);
     </script>
 </html>
